@@ -8,6 +8,8 @@ import java.lang.reflect.InvocationTargetException;
 public class MoodAnalyzerTest
 {
 
+    private java.lang.Object Object;
+
     @Test
     public void givenMoodAnalyzerObject_whenProper_shouleReturnObject()
     {
@@ -69,5 +71,13 @@ public class MoodAnalyzerTest
     public void checkEqualObject() {
         RealMoodAnalyzer moodAnalyzer = MoodAnalyzerFactory.moodAnalyzer();
         Assert.assertEquals(new RealMoodAnalyzer("I am Happy"),moodAnalyzer);
+    }
+
+    @Test
+    public void count()
+    {
+        RealMoodAnalyzer realMoodAnalyzer=new RealMoodAnalyzer("I am Happy");
+        ObjectReflector.dump(realMoodAnalyzer,9);
+
     }
 }

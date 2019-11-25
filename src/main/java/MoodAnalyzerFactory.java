@@ -23,5 +23,6 @@ public class MoodAnalyzerFactory
         }
         return (RealMoodAnalyzer) obj;
     }
+
 }
 

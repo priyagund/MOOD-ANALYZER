@@ -18,7 +18,7 @@ public class RealMoodAnalyzer {
             }
         } catch (NullPointerException e) {
 
-            throw new MoodAnalysisException("please enter proper message");
+            throw new MoodAnalysisException(MoodAnalysisException.ExceptiomType.ENTERED_NULL,"please enter proper message");
         }
     }
 

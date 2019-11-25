@@ -80,4 +80,19 @@ public class MoodAnalyzerTest
         ObjectReflector.dump(realMoodAnalyzer,9);
 
     }
-}
+
+    @Test
+    public void givenNullMood_shouldThrowException()
+    {
+        RealMoodAnalyzer realMoodAnalyzer=new RealMoodAnalyzer(null);
+        try{
+            realMoodAnalyzer.analyzeMood(null);
+        }
+        catch (MoodAnalysisException e) {
+         Assert.assertEquals(MoodAnalysisException.ExceptiomType.ENTERED_NULL,e.type);
+        }
+    }
+
+
+    }
+
